@@ -1,6 +1,6 @@
 //Daniel Zheng
 /* August 24, 2017
-This class compares output using print and pintln
+This class compares output using print and println
  */
 public class Project2 {
 
@@ -11,3 +11,4 @@ public class Project2 {
 	}
 
 }
+
