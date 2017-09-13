@@ -53,7 +53,7 @@ public class Calculate {
 			return false;
 		}
 	}
-	//find absolute value
+	//determine absolute value
 	public static double absValue (double operand) {
 		if(operand >= 0) {
 			return operand;
@@ -61,7 +61,7 @@ public class Calculate {
 			return operand*(-1);
 		}
 	}
-	//find maximum out of two numbers
+	//dtermine maximum out of two numbers
 	public static double max (double firstNumber, double secondNumber) {
 		if(firstNumber>secondNumber) {
 			return firstNumber;
