@@ -95,7 +95,60 @@ public class Calculate {
 			return (numero*1000-((numero*1000%10))+10)/1000;
 		}
 	}
+	//applying an exponent to a number
+	public static double exponent(double base, int exponent) {
+		double result = base;
+			for(int i = 1; i < exponent; i++) {
+				result *= base;
+			}
+			return result;
+		}
+	//determine factorial of input
+	public static int factorial(int n) {
+		int product = 1;
+			for(int i = 2; i <= n; i++) {
+			product = product * i;
+			}
+			return product;
+		}
+	//determine whether or not integer is prime
+	public static boolean isPrime(int n) {
+		if(n<2) {
+			return false;
+		}
+		for(int i = 2; i < n; i++) {
+			if(isDivisibleBy(n, i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	//determine greatest common factor of two integers
+	public static int gcf(int a, int b) {
+		int i;
+		for(i = b; !(isDivisibleBy(b, i) && isDivisibleBy(a, i)); i--) {
+		}
+		return i;
+	}
+	//square root an input
+	public static double sqrt(double n) {
+		if(n < 0) {
+			throw new ArithmeticException();
+		}
+		double approx = n/2;
+		double result = 0;
+		while(result != (n/approx + approx)/2) {
+			result = (n/approx + approx)/2;
+			approx = result;
+		}
+		return round2(result);
+	}
 }
+		
+	
+	
+	
+	
 
 	
 
