@@ -47,7 +47,10 @@ public class Calculate {
 	} 
 	//determines whether integer is divisible by another
 	public static boolean isDivisibleBy (int operand, int factor) {
-		if(operand%factor==0) {
+		if(factor == 0) {
+			throw new ArithmeticException();
+		}
+		if(operand%factor == 0) {
 			return true;
 		} else {
 			return false;
@@ -61,7 +64,7 @@ public class Calculate {
 			return operand*(-1);
 		}
 	}
-	//dtermine maximum out of two numbers
+	//determine maximum out of two numbers
 	public static double max (double firstNumber, double secondNumber) {
 		if(firstNumber>secondNumber) {
 			return firstNumber;
@@ -97,14 +100,20 @@ public class Calculate {
 	}
 	//applying an exponent to a number
 	public static double exponent(double base, int exponent) {
+		if(exponent < 0) {
+			throw new ArithmeticException();
+		}
 		double result = base;
 			for(int i = 1; i < exponent; i++) {
 				result *= base;
 			}
 			return result;
-		}
+	}
 	//determine factorial of input
 	public static int factorial(int n) {
+		if(n < 0) {
+			 throw new ArithmeticException();
+		}
 		int product = 1;
 			for(int i = 2; i <= n; i++) {
 			product = product * i;
@@ -143,7 +152,27 @@ public class Calculate {
 		}
 		return round2(result);
 	}
+	//find real roots using quadratic formula
+	public static String quadForm(int a, int b, int c) {
+		if(discriminant(a, b, c) < 0) {
+			return "no real roots";
+		} else {
+			double add = (-b + sqrt(discriminant(a, b, c)))/(2 * a);
+			double subtract = (-b - sqrt(discriminant(a, b, c)))/(2 * a);
+			
+			if(add != subtract) {
+				if(max(add, subtract) == add) {
+					return round2(subtract) + " and " + round2(add);
+				} else {
+					return round2(add) + " and " + round2(subtract);
+				}
+			} else {
+				return round2(add) + "";
+			}
+		}
+	}
 }
+	
 		
 	
 	
