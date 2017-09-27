@@ -167,7 +167,7 @@ public class Calculate {
 					return round2(add) + " and " + round2(subtract);
 				}
 			} else {
-				return round2(add) + "";
+				return round2(add) + " ";
 			}
 		}
 	}
