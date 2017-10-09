@@ -54,7 +54,5 @@ public class Quadratic {
 		else {
 			return "(" + -b / (2 * a) + ", 0)";
 		}
-		
-	}
-	
+	}	
 }

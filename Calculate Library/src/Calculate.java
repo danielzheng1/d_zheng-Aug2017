@@ -1,5 +1,5 @@
 /*Daniel Zheng
- * September 29, 2017
+ * September 30, 2017
  * Our self written math library
  * It contains a series of methods to do basic math functions
  */
